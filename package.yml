@@ -1,0 +1,24 @@
+# Alle hier gesetzten Werte können über `$addon->getProperty($key)` abgefragt werden
+
+package: contentmigrator # Pflichtfeld
+version: '0.3-beta' # Pflichtfeld
+author: Stefan Brinkers
+
+    
+    
+# Abhängigkeiten
+# Anforderungen ans System oder anderere AddOns, um dieses AddOn installieren oder update zu können
+requires:
+    redaxo: '^5.12' # benötigt mindestens REDAXO 5.5
+    php:
+        version: '>=8.0' # benötigt mindestens PHP 5.6
+
+
+page:
+    title: translate:title
+    icon: rex-icon fa-exchange
+    perm: 'contentmigrator[]'
+    subpages:
+        export: { title: translate:export }
+        import: { title: translate:import }
+        info: { title: translate:info }
